@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Dict
 
-version = "1.4.3"
+version = "1.4.4"
 
 INDEX_ENDPOINT = "https://beta-api.crunchyroll.com/index/v2"
 PROFILE_ENDPOINT = "https://beta-api.crunchyroll.com/accounts/v1/me/profile"
@@ -17,7 +17,7 @@ BROWSE_ENDPOINT = "https://beta-api.crunchyroll.com/content/v1/browse"
 OBJECTS_ENDPOINT = "https://beta-api.crunchyroll.com/cms/v2{}/objects/{}"
 
 AUTHORIZATION = (
-    "Basic aHJobzlxM2F3dnNrMjJ1LXRzNWE6cHROOURteXRBU2Z6QjZvbXVsSzh6cUxzYTczVE1TY1k="
+    "Basic b2VkYXJteHN0bGgxanZhd2ltbnE6OWxFaHZIWkpEMzJqdVY1ZFc5Vk9TNTdkb3BkSnBnbzE="
 )
 
 PLAYLIST_REG = r"\#EXT\-X\-STREAM\-INF\:BANDWIDTH\=(\d+)\,RESOLUTION\=(\d+)x(\d+)"
@@ -25,10 +25,10 @@ PLAYLIST_REG = r"\#EXT\-X\-STREAM\-INF\:BANDWIDTH\=(\d+)\,RESOLUTION\=(\d+)x(\d+
 
 def headers() -> Dict:
     return {
-        "User-Agent": "Crunchyroll/3.10.0 Android/6.0 okhttp/4.9.1",
+        "Connection": "Keep-Alive",
         "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent": "Crunchyroll/3.46.2 Android/13 okhttp/4.12.0",
     }
-
 
 def fixup(d: Dict):
     if "" in d:
