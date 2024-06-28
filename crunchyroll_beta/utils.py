@@ -17,7 +17,7 @@ BROWSE_ENDPOINT = "https://beta-api.crunchyroll.com/content/v1/browse"
 OBJECTS_ENDPOINT = "https://beta-api.crunchyroll.com/cms/v2{}/objects/{}"
 
 AUTHORIZATION = (
-    "Basic bm12anNoZmtueW14eGtnN2ZiaDk6WllJVnJCV1VQYmNYRHRiRDIyVlNMYTZiNFdRb3Mzelg="
+    "Basic d2piMV90YThta3Y3X2t4aHF6djc6MnlSWlg0Y0psX28yMzRqa2FNaXRTbXNLUVlGaUpQXzU="
 )
 
 PLAYLIST_REG = r"\#EXT\-X\-STREAM\-INF\:BANDWIDTH\=(\d+)\,RESOLUTION\=(\d+)x(\d+)"
@@ -27,7 +27,7 @@ def headers() -> Dict:
     return {
         "Connection": "Keep-Alive",
         "Content-Type": "application/x-www-form-urlencoded",
-        "User-Agent": "Crunchyroll/3.54.0 Android/14 okhttp/4.12.0",
+        "User-Agent": "Crunchyroll/3.59.0 Android/14 okhttp/4.12.0",
     }
 
 def fixup(d: Dict):
